@@ -1,3 +1,4 @@
+/* Added boiler code */
 html{
     box-sizing: border-box;
 }
@@ -6,9 +7,9 @@ html{
 *:after {
     box-sizing: inherit;
 }
-
+/* Imported Monserrat google font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* Added features for body */
 body {
     color: black;
     background-color: #063270;
@@ -17,7 +18,7 @@ body {
     line-height: 1.5;
     margin:0;
 }
-
+/* Created color variables */
 :root{
     --black:#000000;
     --cataline: #06327d;
@@ -27,7 +28,7 @@ body {
     --white: #ffffff;
     --lightblue:#cadbf8;
 }
-
+/* Styled all the headings */
 h1 {
     font-size: 3rem;
     line-height: 1.1667;
@@ -50,7 +51,7 @@ h3{
     font-weight: 300;
     margin: 0;
 }
-
+/* Styled header. Added flex on the header (parent) to control logo and nav (children) */
 header{
     display: flex;
     flex-flow: row wrap;
@@ -64,12 +65,13 @@ header{
     padding-bottom: 0;
     margin:0;
 }
+/* Set up container inside body properties */
 .wrapper{
     width: 100%;
     max-width:1200px;
     margin: 0 auto;
 }
-
+/* Added flex on nav ul(parent) to control the navbar list(children) */
 nav ul {
     display:flex;
     flex-flow:row wrap;
@@ -80,16 +82,17 @@ nav ul {
     margin: 0;
     justify-content: center;
 }
-
+/* Styled the anchor element links */
 nav a {
     display:block;
     text-decoration: none; 
     color: var(--white);
 }
+/* I changed color of section 1 */
 .section1{
 background-color: var(--white);
    } 
-
+/* Added flex to section one wrapper (parent) to control cards(children) */
 .featurecardwrapper{
     display:flex;
     flex-flow: column;
@@ -97,23 +100,28 @@ background-color: var(--white);
     align-items: center;
     padding: 2rem;
 }
-
+/* Aligned and centered text card */
 .card-text1{
     text-align: left;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding-left: 0;
 }
-.card-img{
-    width: 90%;
+/* Removed margin from the text paragraph in text card */
+.text1{
+    margin-bottom: 0;
 }
-
+/* Set up the image card width */
+.card-img{
+    width: 100%;
+}
+/* Set up properties for card image */
 .card-img img{
     width: 100%;
     display: block;
     margin: 0.7rem auto;
 }
-
+/* Styled text card button */
 .button1{
     display: inline-block;
     background-color: var(--vegan);
@@ -121,22 +129,50 @@ background-color: var(--white);
     border-radius: 10px;
     text-transform: uppercase;  
 }
-
+/* Styled button anchor element link from */
 .button1 a{
     text-decoration: none;
     color:var(--white);
 }
-.button2{
-    color: var(--white);
-    background-color:var(--cataline);
-}
 
-@media (min-width: 1000px){
-    header{
-        justify-content: space-between;
-        align-items: last baseline;
-        padding-bottom: 0;
-    }
+.section2{
+    background-color: var(--lightblue);
+    padding: 2rem;
+}
+.section2 h2{
+    padding-left: 1 rem;
+}
+.cardwrapper{
+    display:flex;
+    flex-flow: row wrap;
+    gap: 1rem
+}
+.card{
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    flex: 0 0 100%;
+}
+.card img{
+    width: 100%;
+    display: block;
+    margin:0 auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.button2{
+    display: inline-block;
+    background-color:var(--cataline);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center; 
+    margin: 0; 
+}
+.button2 a{
+    text-decoration: none;
+     color: var(--white);
 }
 
 @media (min-width: 650px){
@@ -160,4 +196,20 @@ background-color: var(--white);
     padding-top: 1.5rem;
     min-width: 0;
 }
+.card{
+    flex-flow: row wrap;
+        flex: 0 0 calc((100% - 1rem) / 2);
+    }
+}
+
+@media (min-width: 1000px){
+    header{
+        justify-content: space-between;
+        align-items: last baseline;
+        padding-bottom: 0;
+    }
+    .card{
+        flex-flow: row wrap;
+        flex: 0 0 calc((100% - 3rem) / 4);
+    }
 }

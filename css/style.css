@@ -158,6 +158,8 @@ background-color: var(--white);
 /* Added padding to aligned heading with cards */
 .section2 h2{
     padding-left: 1 rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 /* Added flex to section  */
 .cardwrapper{

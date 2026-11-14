@@ -194,6 +194,14 @@ background-color: var(--white);
 }
 
 @media (min-width: 650px){
+.logo{
+        flex-flow: row wrap;
+        align-items: last-baseline;
+        gap: 1rem;
+    }
+h1{
+    margin-top: 2rem;
+}
     .featurecardwrapper{
     flex-direction: row;
     align-items: center;

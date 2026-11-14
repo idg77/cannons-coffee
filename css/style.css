@@ -34,7 +34,7 @@ h1 {
     line-height: 1.1667;
     font-weight: 300;
     text-transform: uppercase;
-    margin: 0;
+    margin:0;
 }
 
 h2{
@@ -60,14 +60,15 @@ header{
     color: var(--white);
     text-align: center;
     border-bottom: 4px solid var(--sunglow);
-    gap: 1rem;
+    /* gap: 1rem; */
     align-items: last baseline;
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
     margin:0;
 }
-
-header img{
+.logo img{
     max-width: 100%;
+    margin:0;
+    padding: 0;
 }
 /* Set up container inside body properties */
 .wrapper{
@@ -85,6 +86,7 @@ nav ul {
     padding: 1rem;
     margin: 0;
     justify-content: center;
+    padding-bottom: 0;
 }
 /* Styled the anchor element links */
 nav a {
@@ -92,6 +94,15 @@ nav a {
     text-decoration: none; 
     color: var(--white);
 }
+
+.logo{
+    display:flex;
+    flex-flow:column;
+    gap: 1rem;
+    align-items:center;
+    justify-content: center:
+}
+
 /* I changed color of section 1 */
 .section1{
 background-color: var(--white);
@@ -139,13 +150,16 @@ background-color: var(--white);
     color:var(--white);
 }
 
+/* Styled section 2 background */
 .section2{
     background-color: var(--lightblue);
     padding: 2rem;
 }
+/* Added padding to aligned heading with cards */
 .section2 h2{
     padding-left: 1 rem;
 }
+/* Added flex to section  */
 .cardwrapper{
     display:flex;
     flex-flow: row wrap;
@@ -210,7 +224,14 @@ background-color: var(--white);
     header{
         justify-content: space-between;
         align-items: last baseline;
-        padding-bottom: 0;
+        padding-bottom: 1rem;
+    }
+    .logo{
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+    h1{
+        margin-top: 1.5rem;
     }
     .card{
         flex-flow: row wrap;
@@ -226,7 +247,95 @@ footer img{
 footer{
     border-top: 4px solid var(--sunglow);
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     color: var(--white);
 }
 
+.logo1{
+    display:flex;
+    flex-flow:column;
+    gap: 1rem;
+    align-items:center;
+    justify-content: center:
+}
+.lattecardwrapper{
+    display:flex;
+    flex-flow: column;
+    gap:0 2rem;
+    padding: 2rem;
+}
+.cardlatte{
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 0;
+}
+.lattemain{
+    background-color: var(--white);
+}
+.card-img2 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.card-img2 img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.text2{
+    margin: 0;
+}
+
+@media (min-width:649px){
+.logo1{
+        flex-flow: row wrap;
+        align-items: last-baseline;
+        gap: 1rem;
+    }
+.latteh1{
+    margin-top: 2rem;
+}
+.lattecardwrapper{
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 1.5rem;
+}
+.latteh2{
+    padding-bottom: 1rem;
+}
+.card-img2 {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+}
+.card-img2 img{
+     margin-top: 1.5rem;
+     margin-bottom: 1.5rem;
+     margin-left: 0;
+     padding-left: 0; 
+}
+.cardlatte{
+    flex: 1 1 0;
+    width: auto;
+    padding-right: 1rem;
+    min-width: 0;
+    padding-top: 1.5rem;
+}  
+}
+
+@media (min-width:1000px){
+header{
+    align-items: last baseline;
+    padding-bottom: 0.5rem;
+}
+ .card-img2 {
+  padding:0;
+  margin: 0;
+}
+.card-img2 img{
+     margin: 0;
+}
+}
